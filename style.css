@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    
+--Red: hsl(0, 100%, 74%);
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--DarkBlue: hsl(249, 10%, 26%); 
+--GrayishBlue: hsl(246, 25%, 77%);
+}
+body{
+    font-family: "Poppins", system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(images/bg-intro-mobile.png);
+    background-color: var(--Red);
+    overflow-x: hidden;
+}
+main .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+main .container .info h1{
+    font-size: 50px;
+    font-family: inherit;
+    font-weight: 700;
+    color: aliceblue;
+    margin-left: 50px;
+}
+main .container .info p{
+    font-size:16px;
+    font-family: inherit;
+    font-weight: 400;
+    opacity: 0.8;
+    color: aliceblue;
+    margin-left:50px;
+    width: 520px;
+    text-wrap: wrap;
+}
+main .container .sign-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .container .sign-form .btn-h{
+    padding: 15px 20px;
+    background-color: var(--Blue);
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 1, 0.493);
+}
+main .container .sign-form button span{
+    color: #d4d2d2;
+    font-weight: 400;
+    display: inline-block;
+}
+main .container .sign-form form{
+    position: relative;
+    width: 500px;
+    height:auto;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 20px 40px;
+    box-shadow: 0 5px 8px 0px rgba(0, 0, 1, 0.562);
+}
+main .container .sign-form form input{
+    display: block;
+    width: 100%;
+    padding: 17px 0 17px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.6s;
+    margin-top: 20px;
+}
+
+main .container .sign-form form span{
+    float: right;
+    color: var(--Red);
+    padding: 5px 0 15px 0;
+    font-weight: 300;
+}
+main .container .sign-form form .er-1{
+   position: absolute;
+   top: 72px;
+  right: 53px;
+  opacity: 0;
+  transition: all 0.6s;
+}
+main .container .sign-form form .er-1.active{
+    opacity: 1;
+}
+main .container .sign-form form .er-2{
+    position: absolute;
+    top: 168px;
+    right: 53px;
+    opacity: 0;
+  transition: all 0.6s;
+}
+main .container .sign-form form .er-2.active{
+    opacity: 1;
+}
+main .container .sign-form form .er-3{
+    position: absolute;
+    top: 264px;
+    right: 53px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+main .container .sign-form form .er-3.active{
+    opacity: 1;
+}
+main .container .sign-form form .er-4{
+    position: absolute;
+    top: 359px;
+    right: 53px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+main .container .sign-form form .er-4.active{
+    opacity: 1;
+}
+main .container .sign-form form button{
+    background-color:var(--Green) ;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+   padding: 15px;
+   font-weight: 600;
+   font-family: inherit;
+   transition: all 0.6s;
+   margin-top: 10px;
+}
+main .container .sign-form form button:hover{
+    opacity: 0.8;
+}
+
+
+
+/* media query */
+@media(max-width:1024px){
+    
+main .container .sign-form form {
+  width: 434px;
+}
+}
+@media(max-width:768px){
+    main .container .info h1 {
+        font-size: 40px;
+        margin-left:0;
+      }
+      main .container .info p {
+        width: 355px;
+      }
+      main .container .sign-form form {
+        width: 340px;
+      }
+      main .container .sign-form form .er-1 {
+        top: 54px;
+      }
+      main .container .sign-form form .er-2 {
+        top: 148px;
+      }
+      main .container .sign-form form .er-3 {
+        top: 246px;
+      }
+      main .container .sign-form form .er-4 {
+        top: 339px;
+      }
+      main .container .sign-form form button {
+        padding: 13px;
+      }
+      main .container .sign-form form {
+        margin-bottom: 20px;
+      }
+}
+@media(max-width:480px){
+    main .container {
+        flex-direction: column;
+      }
+      main .container .info h1 {
+        margin-top: 500px;
+        text-align: center;
+      }
+      main .container .sign-form .btn-h {
+        padding: 27px 20px;
+        margin-top: 90px;
+      }
+      main .container .sign-form form .er-1 {
+        top: 55px;
+      }
+      main .container .sign-form form .er-2 {
+        top: 149px;
+      }
+      main .container .sign-form form .er-3 {
+        top: 245px;
+      }
+      main .container .sign-form form .er-4 {
+        top: 340px;
+      }
+}
+@media(max-width:320px){
+    main .container .info h1 {
+        font-size: 32px;
+      }
+      main .container .info p {
+        width: 262px;
+        margin-top: 20px;
+        text-align: center;
+        margin-right: 39px;
+      }
+      main .container .sign-form .btn-h {
+        width: 300px;
+      }
+      main .container .sign-form form {
+        width: 297px;
+      }
+      main .container .sign-form form span {
+        font-size: 15px;
+      }
+}
